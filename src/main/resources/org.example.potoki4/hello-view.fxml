@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.ChoiceBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.potoki4.TariffPlansController">
+    <TabPane prefWidth="1200.0" layoutY="30.0">
+        <Tab text="Tariffs">
+            <VBox>
+                <padding>
+                    <Insets top="10.0"/>
+                </padding>
+                <TableView fx:id="tariff_table" prefHeight="350.0" prefWidth="580.0">
+
+                    <columns>
+
+                        <TableColumn fx:id="id_tariff_plans" prefWidth="30.0" text="Id"/>
+                        <TableColumn fx:id="name" prefWidth="280.0" text="Name"/>
+                        <TableColumn fx:id="cost" prefWidth="280.0" text="cost"/>
+                        <TableColumn fx:id="speed" prefWidth="280.0" text="speed"/>
+
+                    </columns>
+                </TableView>
+                <VBox spacing="10.0">
+                    <padding>
+                        <Insets top="10.0" left="10.0"/>
+                    </padding>
+                    <HBox spacing="10.0">
+                        <Label fx:id="id_tariff_plansLabel" text="Id: "/>
+                        <TextField fx:id="id_tariff_plansTextField"/>
+                    </HBox>
+                    <HBox spacing="10.0">
+                        <Label fx:id="nameLabel" text="Name: "/>
+                        <TextField fx:id="nameTextField"/>
+                    </HBox>
+                    <HBox spacing="10.0">
+                        <Label fx:id="costLabel" text="cost: "/>
+                        <TextField fx:id="costTextField"/>
+                    </HBox>
+                    <HBox spacing="10.0">
+                        <Label fx:id="speedLabel" text="speed: "/>
+                        <TextField fx:id="speedTextField"/>
+                    </HBox>
+                    <HBox spacing="10.0">
+                        <Button onAction="#createButton" text="Create"/>
+                        <Button onAction="#updateButton" text="Update"/>
+                        <Button onAction="#deleteButton" text="Delete"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </Tab>
+    </TabPane>
+</AnchorPane>
